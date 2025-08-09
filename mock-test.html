@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mock Test — DGCA Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-900 text-slate-300 text-2xl">
+ <!-- Increased base text size -->
+  <header class="bg-slate-800/80 sticky top-0 z-30">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-14 h-14 rounded overflow-hidden"> <!-- Slightly bigger logo -->
+          <img src="assets/images/bg1.png" alt="DGCA Logo" class="w-full h-full object-contain">
+        </div>
+        <div>
+          <h1 class="text-3xl font-extrabold">Mock Test</h1> <!-- Increased heading -->
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex gap-6 text-xl font-semibold"> <!-- Bigger nav links -->
+        <a href="index.html" class="flex items-center gap-2 hover:text-yellow-300">🏠 Home</a>
+        <a href="calendar.html" class="flex items-center gap-2 hover:text-yellow-300">📅 Calendar</a>
+        <a href="about.html" class="flex items-center gap-2 hover:text-yellow-300">ℹ️ About</a>
+      </nav>
+
+      <!-- Search Bar -->
+      <div class="hidden md:flex items-center gap-2">
+        <span class="text-2xl">🔍</span>
+        <input type="text" placeholder="Search..." class="px-3 py-2 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-300 w-48 md:w-64 text-lg"> <!-- Bigger search -->
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-toggle" class="md:hidden text-4xl">☰</button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden flex-col bg-slate-800/90 text-xl font-semibold space-y-2 px-4 py-3 md:hidden">
+      <a href="index.html" class="flex items-center gap-2 hover:text-yellow-300">🏠 Home</a>
+      <a href="calendar.html" class="flex items-center gap-2 hover:text-yellow-300">📅 Calendar</a>
+      <a href="about.html" class="flex items-center gap-2 hover:text-yellow-300">ℹ️ About</a>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-10">
+    <h2 class="text-yellow-300 font-extrabold text-2xl">Quick Mock Test</h2>
+    <p class="text-slate-300 mt-2 text-lg">This basic test demonstrates client-side quiz logic — you can extend question bank later.</p>
+
+    <div id="quiz-area" class="mt-6 bg-slate-800/60 rounded p-6 text-lg">
+      <div id="quiz-intro">
+        <label for="topic-select" class="block text-lg mb-2">Select topic:</label>
+        <select id="topic-select" class="px-4 py-3 rounded bg-slate-700 text-lg">
+          <option value="air">Air Regulations</option>
+          <option value="met">Meteorology</option>
+          <option value="nav">Navigation</option>
+          <option value="tech">Technical General</option>
+        </select>
+        <div class="mt-4">
+          <button id="start-quiz" class="bg-yellow-400 text-slate-900 px-6 py-3 rounded font-bold text-lg">Start Quiz</button>
+        </div>
+      </div>
+
+      <div id="quiz-container" class="hidden mt-4"></div>
+      <div id="quiz-result" class="hidden mt-4"></div>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

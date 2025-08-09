@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Exam Calendar — DGCA Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body class="bg-slate-900 text-slate-100">
+  <header class="bg-slate-800/80 sticky top-0 z-30">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <!-- Updated logo -->
+        <div class="w-12 h-12 rounded overflow-hidden">
+          <img src="assets/images/bg1.png" alt="DGCA Logo" class="w-full h-full object-contain">
+        </div>
+        <div>
+          <h1 class="text-2xl font-extrabold">Exam Calendar</h1>
+        </div>
+      </a>
+      <nav class="hidden md:flex gap-6 text-lg">
+        <a href="index.html" class="nav-link flex items-center gap-2"><i data-lucide="home"></i> Home</a>
+        <a href="calendar.html" class="nav-link flex items-center gap-2"><i data-lucide="calendar"></i> Exam Calendar</a>
+        <a href="mock-test.html" class="nav-link flex items-center gap-2"><i data-lucide="edit-3"></i> Mock Test</a>
+        <a href="about.html" class="nav-link flex items-center gap-2"><i data-lucide="info"></i> About</a>
+      </nav>
+      <div class="hidden md:flex items-center bg-slate-700 rounded px-3 py-1">
+        <i data-lucide="search" class="text-slate-300"></i>
+        <input type="text" placeholder="Search..." class="bg-transparent outline-none px-2 text-slate-100 placeholder-slate-400">
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 py-10">
+    <h2 class="text-yellow-300 font-extrabold text-2xl">Sample Exam Calendar (2025)</h2>
+    <p class="text-slate-300 mt-2 text-lg">Note: These are sample dates for demo — always check official DGCA circulars for exact dates.</p>
+
+    <div class="mt-6 overflow-x-auto">
+      <table class="w-full text-left rounded-lg overflow-hidden text-lg">
+        <thead class="bg-yellow-400 text-slate-900">
+          <tr>
+            <th class="px-4 py-3">Exam</th>
+            <th class="px-4 py-3">Registration Start</th>
+            <th class="px-4 py-3">Registration End</th>
+            <th class="px-4 py-3">Exam Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-slate-800/60 border-b border-slate-700">
+            <td class="px-4 py-3">Air Regulations</td>
+            <td class="px-4 py-3">2025-02-15</td>
+            <td class="px-4 py-3">2025-03-05</td>
+            <td class="px-4 py-3">2025-03-15</td>
+          </tr>
+          <tr class="bg-slate-800/60 border-b border-slate-700">
+            <td class="px-4 py-3">Meteorology</td>
+            <td class="px-4 py-3">2025-02-15</td>
+            <td class="px-4 py-3">2025-03-07</td>
+            <td class="px-4 py-3">2025-03-17</td>
+          </tr>
+          <tr class="bg-slate-800/60 border-b border-slate-700">
+            <td class="px-4 py-3">Navigation</td>
+            <td class="px-4 py-3">2025-05-01</td>
+            <td class="px-4 py-3">2025-05-20</td>
+            <td class="px-4 py-3">2025-06-02</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
