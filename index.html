@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DGCA Exam Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-900 text-slate-100 relative">
+
+  <!-- Date & Time Box (Top Right) -->
+  <div id="datetime-box" class="fixed top-3 right-4 z-50 px-4 py-2 rounded-lg bg-gradient-to-r from-yellow-400 to-pink-500 text-slate-900 font-semibold shadow-lg">
+    <span id="datetime"></span>
+  </div>
+
+  <!-- NAV -->
+  <header class="bg-slate-800/80 backdrop-blur sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-md overflow-hidden flex items-center justify-center">
+          <img src="assets/images/bg1.png" alt="DGCA Logo" class="w-full h-full object-contain">
+        </div>
+        <div>
+          <h1 class="text-2xl font-extrabold">DGCA Exam Hub</h1>
+          <p class="text-sm text-slate-300 -mt-1">Syllabus • Calendar • Mock Tests</p>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-lg">
+        <a href="index.html" class="nav-link flex items-center gap-2">🏠 Home</a>
+        <a href="calendar.html" class="nav-link flex items-center gap-2">📅 Exam Calendar</a>
+        <a href="mock-test.html" class="nav-link flex items-center gap-2">📝 Mock Test</a>
+        <a href="about.html" class="nav-link flex items-center gap-2">ℹ️ About</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <div class="relative hidden md:block">
+          <input id="search" type="search" placeholder="Search exams..." class="pl-9 pr-3 py-2 rounded bg-slate-700 text-base focus:outline-none" />
+          <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">🔍</span>
+        </div>
+        <button id="menu-btn" class="md:hidden p-2 rounded bg-slate-700" aria-label="Toggle menu">
+          <svg id="menu-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden text-lg">
+      <div class="px-4 pb-4 space-y-3">
+        <a href="index.html" class="block nav-link-mobile">🏠 Home</a>
+        <a href="calendar.html" class="block nav-link-mobile">📅 Exam Calendar</a>
+        <a href="mock-test.html" class="block nav-link-mobile">📝 Mock Test</a>
+        <a href="about.html" class="block nav-link-mobile">ℹ️ About</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main class="max-w-6xl mx-auto px-4 py-10">
+    <section class="bg-gradient-to-r from-yellow-500 via-orange-400 to-pink-500 text-slate-900 rounded-lg p-8 shadow-lg">
+      <h2 class="text-4xl md:text-5xl font-extrabold">All DGCA Exam Info — in one place</h2>
+      <p class="mt-2 md:mt-4 text-base md:text-lg">Syllabus, exam patterns, calendar entries and interactive mock tests for aspiring pilots.</p>
+    </section>
+
+    <!-- SEARCH + EXAM CARDS -->
+    <section class="mt-8">
+      <div class="flex items-center justify-between gap-4">
+        <h3 class="text-3xl font-bold text-yellow-400">DGCA Exams</h3>
+        <div class="md:hidden relative">
+          <input id="search-mobile" type="search" placeholder="Search..." class="pl-9 py-2 rounded bg-slate-800 text-base w-48" />
+          <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">🔍</span>
+        </div>
+      </div>
+
+      <div id="exam-list" class="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Card: Air Regulations -->
+        <a class="exam-card" href="exams/air-regulations.html" data-title="air regulations">
+          <div class="flex items-start justify-between">
+            <div>
+              <h4 class="text-2xl font-semibold text-yellow-300">Air Regulations</h4>
+              <p class="mt-1 text-base text-slate-300">ICAO annexes, rules of the air, licensing & DGCA laws.</p>
+            </div>
+            <div class="text-sm text-slate-400">Exam</div>
+          </div>
+        </a>
+
+        <!-- Card: Meteorology -->
+        <a class="exam-card" href="exams/meteorology.html" data-title="meteorology">
+          <div class="flex items-start justify-between">
+            <div>
+              <h4 class="text-2xl font-semibold text-yellow-300">Meteorology</h4>
+              <p class="mt-1 text-base text-slate-300">Atmosphere, METAR/TAF, clouds, turbulence and icing.</p>
+            </div>
+            <div class="text-sm text-slate-400">Exam</div>
+          </div>
+        </a>
+
+        <!-- Card: Navigation -->
+        <a class="exam-card" href="exams/navigation.html" data-title="navigation">
+          <div class="flex items-start justify-between">
+            <div>
+              <h4 class="text-2xl font-semibold text-yellow-300">Navigation</h4>
+              <p class="mt-1 text-base text-slate-300">Charts, radio nav (VOR/NDB/GPS), dead reckoning, flight planning.</p>
+            </div>
+            <div class="text-sm text-slate-400">Exam</div>
+          </div>
+        </a>
+
+        <!-- Card: Technical General -->
+        <a class="exam-card" href="exams/tech-general.html" data-title="technical general">
+          <div class="flex items-start justify-between">
+            <div>
+              <h4 class="text-2xl font-semibold text-yellow-300">Technical General</h4>
+              <p class="mt-1 text-base text-slate-300">Aerodynamics, engines, systems, instruments & avionics.</p>
+            </div>
+            <div class="text-sm text-slate-400">Exam</div>
+          </div>
+        </a>
+
+        <!-- Placeholder extra cards -->
+        <div class="exam-card opacity-80">
+          <h4 class="text-xl font-semibold text-yellow-300">Coming Soon</h4>
+          <p class="text-base text-slate-300 mt-1">More DGCA subjects & mock tests will be added.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="mt-8 grid md:grid-cols-3 gap-6">
+      <a href="mock-test.html" class="p-4 rounded bg-slate-800 hover:bg-slate-700">
+        <h4 class="font-bold text-xl">Take a Mock Test</h4>
+        <p class="text-base text-slate-300 mt-1">Practice MCQs for quick revision.</p>
+      </a>
+      <a href="calendar.html" class="p-4 rounded bg-slate-800 hover:bg-slate-700">
+        <h4 class="font-bold text-xl">Exam Calendar</h4>
+        <p class="text-base text-slate-300 mt-1">Upcoming registration & exam dates (sample).</p>
+      </a>
+      <a href="about.html" class="p-4 rounded bg-slate-800 hover:bg-slate-700">
+        <h4 class="font-bold text-xl">About</h4>
+        <p class="text-base text-slate-300 mt-1">How this site helps aspiring pilots.</p>
+      </a>
+    </section>
+  </main>
+
+  <footer class="mt-12 py-6 bg-slate-800">
+    <div class="max-w-6xl mx-auto px-4 text-center text-sm text-slate-400">
+      © 2025 DGCA Exam Hub — Built by Chakri • For educational use only
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+      const dateStr = now.toLocaleDateString('en-GB', options);
+      const timeStr = now.toLocaleTimeString('en-GB');
+      document.getElementById('datetime').textContent = `${dateStr} | ${timeStr}`;
+    }
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+  </script>
+</body>
+</html>
