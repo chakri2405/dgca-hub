@@ -1,0 +1,51 @@
+/* Basic custom styling to complement Tailwind */
+:root {
+  --muted: #94a3b8;
+  --card: #0b1220;
+}
+
+/* nav links */
+.nav-link {
+  color: #cbd5e1;
+  font-weight: 600;
+}
+.nav-link:hover { color: #fbbf24; }
+
+.nav-link-mobile {
+  display: block;
+  padding: 10px 0;
+  color: #cbd5e1;
+  border-bottom: 1px dashed rgba(148,163,184,0.06);
+}
+
+/* exam card */
+.exam-card {
+  display: block;
+  padding: 18px;
+  background: linear-gradient(180deg, rgba(30,41,59,0.6), rgba(2,6,23,0.5));
+  border-radius: 0.6rem;
+  border: 1px solid rgba(148,163,184,0.06);
+  transition: transform .18s ease, background .18s;
+}
+.exam-card:hover { transform: translateY(-6px); background: linear-gradient(180deg, rgba(30,41,59,0.75), rgba(2,6,23,0.6)); }
+.exam-card h4 { color: #fbbf24; }
+.custom-list { color: #cbd5e1; margin-left: 1.25rem; }
+
+/* prose readability */
+.prose { line-height: 1.6; }
+.prose h2, .prose h3 { margin-top: 1rem; }
+
+/* small screens fix */
+@media (max-width: 768px) {
+  .exam-card { padding: 14px; }
+}
+
+/* table styles for calendar */
+table { border-collapse: collapse; width: 100%; }
+thead th { font-weight: 700; }
+
+/* form elements */
+input[type="search"], select { outline: none; }
+
+/* small helper */
+.hidden { display: none; }
